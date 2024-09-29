@@ -1,0 +1,86 @@
+
+
+
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(-45deg, #00c6ff, #0072ff, #ff6ec4, #f0c27b);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+  }
+  
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .box {
+    cursor: pointer;
+    border-radius: 50%; /* Make the container circular */
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    width: 150px; /* Set fixed width and height for uniform size */
+    height: 150px;
+    border: 5px solid; /* Add border */
+    animation: borderColorChange 5s linear infinite; /* Animate border color */
+  }
+  
+  @keyframes borderColorChange {
+    0% { border-color: #ff4757; }
+    25% { border-color: #1e90ff; }
+    50% { border-color: #2ed573; }
+    75% { border-color: #ffa502; }
+    100% { border-color: #ff4757; }
+  }
+  
+  .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; /* Make image circular */
+  }
+  
+  .box:hover {
+    transform: scale(1.1); /* Enlarge on hover */
+  }
+  
+  #backButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff4757;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #backButton:hover {
+    background-color: #ff6b81;
+  }
+  
+  .container{
+    margin-top: 200px;
+    
+  }
